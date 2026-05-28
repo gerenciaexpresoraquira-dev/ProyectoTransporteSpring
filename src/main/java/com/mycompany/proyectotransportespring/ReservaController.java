@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Permite mostrar el formulario principal y procesar
  * la información enviada por el usuario.
  */
+/*
+ * Controlador encargado de gestionar
+ * las reservas del sistema de expresos.
+ */
 @Controller
 public class ReservaController {
 
@@ -22,6 +26,10 @@ public class ReservaController {
      * 
      * @return Vista index.html
      */
+    /*
+ * Método que muestra el formulario
+ * principal de reservas.
+ */
     @GetMapping("/")
     public String mostrarFormulario() {
 
@@ -43,6 +51,10 @@ public class ReservaController {
      * 
      * @return Vista resultado.html
      */
+    /*
+ * Método encargado de procesar
+ * la reserva enviada por el usuario.
+ */
     @PostMapping("/reservar")
     public String procesarReserva(
             @RequestParam String nombre,
