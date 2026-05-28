@@ -1,0 +1,139 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reserva Exitosa</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1b5e20, #43a047);
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor{
+            width: 450px;
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            text-align: center;
+            color: #1b5e20;
+            margin-bottom: 25px;
+        }
+
+        .datos{
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        .titulo{
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .mensaje{
+            text-align: center;
+            color: #616161;
+            margin-bottom: 25px;
+        }
+
+        .boton{
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        .boton:hover{
+            background-color: #1b5e20;
+        }
+
+        .footer{
+            text-align: center;
+            margin-top: 20px;
+            color: gray;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Reserva Exitosa</h1>
+<div class="datos">
+    <span class="titulo">Número de reserva:</span>
+    <span th:text="${numeroReserva}"></span>
+</div>
+
+<div class="datos">
+    <span class="titulo">Estado:</span>
+    Confirmada
+</div>
+
+        <p class="mensaje">
+            Expreso Ráquira confirma correctamente su reserva.
+        </p>
+
+        <div class="datos">
+            <span class="titulo">Nombre:</span>
+            <span th:text="${nombre}"></span>
+        </div>
+
+        <div class="datos">
+            <span class="titulo">Origen:</span>
+            <span th:text="${origen}"></span>
+        </div>
+
+        <div class="datos">
+            <span class="titulo">Destino:</span>
+            <span th:text="${destino}"></span>
+        </div>
+
+        <div class="datos">
+            <span class="titulo">Fecha:</span>
+            <span th:text="${fecha}"></span>
+        </div>
+
+        <div class="datos">
+            <span class="titulo">Hora:</span>
+            <span th:text="${hora}"></span>
+        </div>
+
+        <div class="datos">
+            <span class="titulo">Número de pasajeros:</span>
+            <span th:text="${personas}"></span>
+        </div>
+
+        <a href="/" class="boton">
+            Realizar nueva reserva
+        </a>
+
+        <div class="footer">
+            Expreso Ráquira © 2026
+        </div>
+
+    </div>
+
+</body>
+
+</html>

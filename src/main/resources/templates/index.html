@@ -1,0 +1,129 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expreso Ráquira</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1b5e20, #43a047);
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor{
+            width: 420px;
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            text-align: center;
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo{
+            text-align: center;
+            color: gray;
+            margin-bottom: 30px;
+        }
+
+        label{
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        input{
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid #bdbdbd;
+            box-sizing: border-box;
+        }
+
+        input:focus{
+            border-color: #2e7d32;
+            outline: none;
+        }
+
+        input[type="submit"]{
+            background-color: #2e7d32;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover{
+            background-color: #1b5e20;
+        }
+
+        .footer{
+            text-align: center;
+            margin-top: 20px;
+            color: #616161;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Expreso Ráquira</h1>
+
+        <p class="subtitulo">
+            Sistema de Reservas de Transporte
+        </p>
+
+        <form action="/reservar" method="post">
+
+            <label>Nombre del pasajero</label>
+            <input type="text" name="nombre" required>
+
+            <label>Origen</label>
+            <input type="text" name="origen" required>
+
+            <label>Destino</label>
+            <input type="text" name="destino" required>
+
+            <label>Fecha del viaje</label>
+            <input type="date" name="fecha" required>
+
+            <label>Hora de salida</label>
+            <input type="time" name="hora" required>
+
+            <label>Número de pasajeros</label>
+            <input type="number" name="personas" required>
+
+            <input type="submit" value="Reservar Cupo">
+
+        </form>
+
+        <div class="footer">
+            Expreso Ráquira © 2026
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+```
